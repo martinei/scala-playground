@@ -1,6 +1,6 @@
 import org.junit.Test
 
-class PlaygroundTest {
+class PatternMatchingTest {
 
 
   @Test
