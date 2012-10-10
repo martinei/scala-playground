@@ -57,7 +57,7 @@ class PlaygroundTest {
       return x * 2
     }
 
-    // Look Ma! This is overloaded!
+    // Overload in parameter
     def unapply(z: Int): Boolean = {
       z % 2 == 0
     }
@@ -135,6 +135,16 @@ class PlaygroundTest {
     val p = Pair(2, 5)
     p match {
       case Pair(x, y) => println("A Pair with " + x + " and " + y)
+    }
+
+    p match {
+      case Pair(2, 4) => println("A Pair (2,4)")
+      case _ => println ("Did't match")
+    }
+
+    p match {
+      case Pair(2, _) => println("A Pair (2, and somethingh)")
+      case _ => println ("Did't match")
     }
   }
 }
